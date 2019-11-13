@@ -6,6 +6,15 @@
   /* Fonts */
   --font-base: "Crimson Text", Georgia, Times, "Times New Roman", serif;
   --font-title: "Lato", Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  /* Colors */
+  --color-main: #323042;
+  --color-light: #fff;
+  --color-shadow: rgba(168, 168, 168, .2);
+
+  /* Misc */
+  --navbar-height: 50px;
+  --container-p-s: 20px;
 }
 
 /*========================================
@@ -46,4 +55,94 @@ body {
   font-family: var(--font-base);
   font-size: 18px;
   line-height: 1.5;
+}
+
+/*========================================
+--> NAVIGATION
+========================================*/
+
+body {
+  margin-top: var(--navbar-height);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top .3s;
+}
+
+/* Contains the nav items: Home, Talks, Papers */
+.navList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: var(--container-p-s);
+  padding-left: var(--container-p-s);
+  background-color: var(--color-light);
+  box-shadow: 0 4px 4px var(--color-shadow);
+  /* Hidden in mobile view */
+  transform: translateY(-12rem);
+  transition: transform .5s ease-out;
+}
+.navList__li {
+  width: 6rem;
+  text-align: center;
+}
+.navList__link {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: .5rem;
+  padding: .3rem 0;
+  font-family: var(--font-title);
+  color: var(--color-main);
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+}
+.navList__link.currentPage {
+  border-bottom: 3px solid var(--color-main);
+}
+
+/* A wide stripe on the top of the screen. Only visible in mobile view; contains .navToggle */
+.navBar {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: var(--navbar-height);
+  padding-right: var(--container-p-s);
+  padding-left: var(--container-p-s);
+  background-color: var(--color-light);
+}
+
+/* Nav toggle btn. Only visible in mobile view. */
+.navToggle {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+/* The btn icon changes with its state */
+.navClosed {
+  background-image: url('img/menu-open.png');
+}
+.navOpen {
+  background-image: url('img/menu-close.png');
+}
+
+/* Bigger screen sizes - See also: app.js/NAVIGATION */
+/* Must be the same parm as in app.js/NAVIGATION/biggerScreens */
+@media (min-width: 700px) {
+  .navList {
+    flex-direction: row;
+    transform: translateY(0);
+  }
+  .navList__link {
+    margin-bottom: 0;
+  }
 }
