@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>S. Kisfaludi-Bak</title>
+    <meta name="description" content="The academic webpage of Sandor Kisfaludi-Bak displays his work on algorithms, computational and combinatorial geometry, and parameterized complexity." />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato&display=swap" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>S. Kisfaludi-Bak</title>
-  <meta name="description"
-    content="The academic webpage of Sandor Kisfaludi-Bak displays his work on algorithms, computational and combinatorial geometry, and parameterized complexity." />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/favicon.png" />
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lato&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav>
+      <!-- .navBar is only visible in mobile view -->
+      <div class="navBar">
+        <button class="navToggle navClosed" tabindex="1" aria-label="open navigation"></button>
+      </div>
+      <ul class="navList">
+        <li class="navList__li"><a class="navList__link currentPage" href="index.html" tabindex="2">Home</a></li>
+        <li class="navList__li"><a class="navList__link" href="#" tabindex="3">Talks</a></li>
+        <li class="navList__li"><a class="navList__link" href="#" tabindex="4">Papers</a></li>
+      </ul>
+    </nav>
 
-<body>
+    <main class="home-main">
+      <!-- PROFILE -->
+      <div class="profile">
+        <h1 class="profile__title">Sándor Kisfaludi&#8209;Bak</h1>
+        <div class="profile__intro">
+          <p>I am a PostDoc at the <a href="https://www.mpi-inf.mpg.de/departments/algorithms-complexity/" target="_blank" rel="noopener noreferrer">Algorithms and Complexity Group</a> of the <a href="https://www.mpi-inf.mpg.de/home/" target="_blank" rel="noopener noreferrer">Max Planck Institute for Informatics</a>, in Saarbrücken, Germany.</p>
+          <p>My main interests are algorithms, computational and combinatorial geometry, and parameterized complexity.</p>
+        </div>
+        <img class="profile__img" src="img/profile-avatar.png" alt="Profile picture of Sandor Kisfaludi-Bak" />
+      </div>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <!-- .navBar is only visible in mobile view -->
-    <div class="navBar">
-      <button class="navToggle navClosed" tabindex="1" aria-label="open navigation"></button>
-    </div>
-    <ul class="navList">
-      <li class="navList__li"><a class="navList__link currentPage" href="index.html" tabindex=2>Home</a></li>
-      <li class="navList__li"><a class="navList__link" href="#" tabindex=3>Talks</a></li>
-      <li class="navList__li"><a class="navList__link" href="#" tabindex=4>Papers</a></li>
-    </ul>
-  </nav>
+      <!-- Contact -->
+      <div class="contact">
+        <p class="contact__title">Office:</p>
+        <p>E1 4 311B</p>
+        <hr />
+        <p class="contact__title">Email:</p>
+        <!-- For more info, see app.js/SECURE EMAIL DISPLAY -->
+        <p class="contact__email">goawayrobots@mpi-inf.de</p>
+      </div>
+    </main>
 
-  <script src="app.js"></script>
-</body>
+    <!-- Photo -->
+    <div class="photo "></div>
 
+    <script src="app.js"></script>
+  </body>
 </html>
