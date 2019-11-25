@@ -213,15 +213,16 @@ nav {
   font-size: 1rem;
   line-height: 1.25;
   text-align: center;
-  border: 1px solid var(--color-main);
+  border: 2px solid var(--color-shadow);
 }
 .contact__title {
   font-weight: bold;
   color: var(--color-main);
 }
 .contact hr {
-  width: 50%;
-  border-color: var(--color-grey);
+  width: 80%;
+  border-color: var(--color-light);
+  background-color: var(--color-shadow);
 }
 
 /* Photo of a beautiful landscape */
