@@ -107,6 +107,16 @@ if (emailContainer) {
 }
 
 /*========================================
+--> FOOTER - CURRENT YEAR
+========================================*/
+const yearBox = document.querySelector(".footer__year");
+let currentYear = new Date().getFullYear();
+
+if (yearBox) {
+  yearBox.innerHTML = currentYear;
+}
+
+/*========================================
 --> EVENT LISTENERS
 ========================================*/
 

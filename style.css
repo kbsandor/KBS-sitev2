@@ -402,3 +402,60 @@ nav {
   font-size: 0.9rem;
   color: var(--color-grey);
 }
+
+/*========================================
+--> FOOTER
+========================================*/
+/* Home page doesn't have a footer */
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-top: 80px;
+  font-size: 18px;
+  color: var(--color-light);
+  background-color: var(--color-main);
+}
+/* Decorative pine trees */
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  width: 54px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer::before {
+  left: var(--container-p-s);
+  background-image: url("img/pine-left.png");
+}
+.footer::after {
+  right: var(--container-p-s);
+  background-image: url("img/pine-right.png");
+}
+
+/* Must be the same parm as in NAVIGATION/media query  */
+/* Growing the pine trees :-) */
+@media (min-width: 600px) {
+  .footer {
+    margin-top: 100px;
+  }
+  .footer::before,
+  .footer::after {
+    top: -60px;
+    width: 80.5px;
+    height: 60px;
+  }
+  .footer::before {
+    left: var(--container-p-m);
+  }
+  .footer::after {
+    right: var(--container-p-m);
+  }
+}
