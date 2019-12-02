@@ -21,7 +21,7 @@
   --side-photo-width: 35vw;
   /* Must be the same as in app.js/INDEX/indexWidth */
   --index-width: 30vw;
-  --index-width-big: 140px;
+  --index-width-big: 180px;
 }
 
 /*========================================
@@ -81,6 +81,13 @@ a {
   color: #2e3a7b;
   text-decoration: none;
   border-bottom: 1px solid #2e3a7b;
+}
+
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
 }
 
 /*========================================
@@ -313,6 +320,9 @@ nav {
   box-shadow: -5px 0 5px var(--color-shadow);
 }
 .index > a {
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.25;
   color: var(--color-grey);
   border-bottom: none;
 }
@@ -355,23 +365,29 @@ nav {
     width: var(--index-width-big);
     padding-top: 80px;
     padding-right: var(--container-p-m);
+    padding-left: var(--container-p-m);
     padding-bottom: 80px;
     border-right: 1px solid var(--color-grey);
     box-shadow: none;
+  }
+  .index > a {
+    text-align: right;
   }
 }
 
 /*========================================
 --> TALKS and PAPERS ENTRY
 ========================================*/
-.talks {
+.talks,
+.papers {
   padding-right: var(--container-p-s);
   padding-left: var(--container-p-s);
 }
 
 /* Must be the same parm as in NAVIGATION/media query  */
 @media (min-width: 600px) {
-  .talks {
+  .talks,
+  .papers {
     padding-top: 30px;
     padding-left: calc(var(--index-width-big) + var(--container-p-m));
   }
@@ -383,10 +399,6 @@ nav {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
-.entry:hover {
-  border-top: 1px solid var(--color-grey);
-  border-bottom: 1px solid var(--color-grey);
-}
 .entry__section {
   color: var(--color-main);
   margin-top: 1.5rem;
@@ -397,6 +409,10 @@ nav {
   font-size: 1.25rem;
   line-height: 1.2;
   color: var(--color-dark);
+  border-bottom: none;
+}
+.entry:hover .entry__title {
+  border-bottom: 1px solid var(--color-dark);
 }
 .entry__info {
   font-family: var(--font-title);
