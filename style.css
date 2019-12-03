@@ -29,12 +29,14 @@
 ========================================*/
 
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -104,21 +106,34 @@ nav {
   width: 100%;
   /* Shrink height, otherwise the overlap would make links unclickable in mobile view */
   height: var(--navbar-height);
+  -webkit-transition: top 0.3s;
   transition: top 0.3s;
 }
 
 /* Contains the nav items: Home, Talks, Papers */
 .navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-right: var(--container-p-s);
   padding-left: var(--container-p-s);
   background-color: var(--color-light);
+  -webkit-box-shadow: 0 4px 4px var(--color-shadow);
   box-shadow: 0 4px 4px var(--color-shadow);
   /* Hidden in mobile view */
+  -webkit-transform: translateY(-12rem);
   transform: translateY(-12rem);
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 .navList__li {
   width: 6rem;
@@ -142,8 +157,14 @@ nav {
 .navBar {
   position: relative;
   z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: var(--navbar-height);
   padding-right: var(--container-p-s);
@@ -175,7 +196,11 @@ nav {
 /* Must be the same parm as in PROFILE/media query  */
 @media (min-width: 600px) {
   .navList {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   .navList__link {
@@ -213,6 +238,8 @@ nav {
 
 /* Contact */
 .contact {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 40px auto;
   padding: 20px;
@@ -268,8 +295,15 @@ nav {
 /* Spread content on bigger screens to prevent too much white space */
 @media (min-width: 600px) and (min-height: 650px) {
   .home-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     height: calc(100vh - var(--navbar-height));
   }
@@ -309,14 +343,24 @@ nav {
   top: 0;
   right: calc(0px - var(--index-width));
   z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: var(--index-width);
   height: 100vh;
   padding-bottom: 100px;
   background-color: var(--color-light);
+  -webkit-box-shadow: -5px 0 5px var(--color-shadow);
   box-shadow: -5px 0 5px var(--color-shadow);
 }
 .index > a {
@@ -359,8 +403,14 @@ nav {
   .index {
     left: 0;
     top: calc(var(--navbar-height) + 60px);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     width: var(--index-width-big);
     padding-top: 80px;
@@ -368,6 +418,7 @@ nav {
     padding-left: var(--container-p-m);
     padding-bottom: 80px;
     border-right: 1px solid var(--color-grey);
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .index > a {
@@ -427,8 +478,14 @@ nav {
 
 .footer {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 40px;
   margin-top: 80px;
