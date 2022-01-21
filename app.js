@@ -97,8 +97,8 @@ function indexVisibility(screenSize) {
 ========================================*/
 
 const emailContainer = document.querySelector(".contact__email");
-const email1 = "sandor.kisfaludibak";
-const email2 = "eth-its.ethz.ch";
+const email1 = "sandor.kisfaludi-bak";
+const email2 = "aalto.fi";
 
 // Checking if the element exists on the page
 // (If it doesn't, it will stop the JS interpreter and won't execute the rest of the code)
