@@ -4,8 +4,8 @@
 
 :root {
   /* Fonts */
-  --font-base: 'Crimson Text', Georgia, Times, 'Times New Roman', serif;
-  --font-title: 'Lato', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --font-base: "Crimson Text", Georgia, Times, "Times New Roman", serif;
+  --font-title: "Lato", Arial, "Helvetica Neue", Helvetica, sans-serif;
 
   /* Colors */
   --color-main: #323042;
@@ -185,10 +185,10 @@ nav {
 }
 /* The btn icon changes with its state */
 .openNav {
-  background-image: url('img/menu-open.png');
+  background-image: url("img/menu-open.png");
 }
 .closeNav {
-  background-image: url('img/menu-close.png');
+  background-image: url("img/menu-close.png");
 }
 
 /* Bigger screen sizes - See also: app.js/NAVIGATION */
@@ -236,6 +236,26 @@ nav {
   margin: 0 auto;
 }
 
+/* Message */
+.message {
+  max-width: 700px;
+
+  margin: 40px auto;
+  padding-right: var(--container-p-s);
+  padding-left: var(--container-p-s);
+}
+.message > * {
+  margin-bottom: 0.5rem;
+}
+.message p,
+.message li {
+  text-align: justify;
+}
+.message ul {
+  list-style: disc;
+  padding-left: 50px;
+}
+
 /* Contact */
 .contact {
   width: -webkit-fit-content;
@@ -263,7 +283,7 @@ nav {
 .photo {
   width: 100%;
   height: 160px;
-  background-image: url('img/landscape.jpg');
+  background-image: url("img/landscape.jpg");
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,8 +335,8 @@ nav {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     grid-template-areas:
-      'title title'
-      'img intro';
+      "title title"
+      "img intro";
     padding-right: var(--container-p-m);
     padding-left: var(--container-p-m);
   }
@@ -329,6 +349,11 @@ nav {
   }
   .profile__img {
     grid-area: img;
+  }
+
+  .message {
+    padding-right: var(--container-p-m);
+    padding-left: var(--container-p-m);
   }
 }
 
@@ -392,10 +417,10 @@ nav {
 }
 /* The btn icon changes with its state */
 .openIndex {
-  background-image: url('img/index-open.png');
+  background-image: url("img/index-open.png");
 }
 .closeIndex {
-  background-image: url('img/index-close.png');
+  background-image: url("img/index-close.png");
 }
 
 /* Must be the same parm as in NAVIGATION/media query  */
@@ -496,7 +521,7 @@ nav {
 /* Decorative pine trees */
 .footer::before,
 .footer::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -40px;
   width: 54px;
@@ -507,11 +532,11 @@ nav {
 }
 .footer::before {
   left: var(--container-p-s);
-  background-image: url('img/pine-left.png');
+  background-image: url("img/pine-left.png");
 }
 .footer::after {
   right: var(--container-p-s);
-  background-image: url('img/pine-right.png');
+  background-image: url("img/pine-right.png");
 }
 
 /* Must be the same parm as in NAVIGATION/media query  */
