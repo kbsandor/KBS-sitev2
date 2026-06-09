@@ -230,10 +230,26 @@ nav {
 .profile__intro > p {
   margin-bottom: 0.5em;
 }
+.profile__affiliation {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+}
+.profile__affiliation a {
+  line-height: 0;
+  border-bottom: none;
+}
 .profile__img {
   display: block;
   width: 150px;
   margin: 0 auto;
+}
+.halt-logo {
+  display: block;
+  width: 150px;
 }
 
 /* Message */
